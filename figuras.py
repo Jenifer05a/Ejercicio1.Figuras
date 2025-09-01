@@ -34,15 +34,18 @@ class Triangulo(FiguraGeometrica):
    
 def main():
     figuras = [
-        Circulo("Circulo 1", 6),
-        Rectangulo("Rectangulo 1", 7, 4),
-        Triangulo("Triangulo 1", 2, 3)
+        Circulo("Circulo 1", 11),
+        Rectangulo("Rectangulo 1", 76, 4),
+        Triangulo("Triangulo 1", 4, 7)
     ]
     
+    print(f"{'Figura':<20} {'Área':>10}")
+    print("-" * 32)
+
     for figura in figuras:
-        print(f"Nombre: {figura.nombre}")
-        print(f"Área: {figura.calcular_area():.2f}")
-    
+        area = figura.calcular_area()
+        print(f"{figura.nombre:<20} {area:>10.2f}")
+
 if __name__=="__main__":
     main()
         
